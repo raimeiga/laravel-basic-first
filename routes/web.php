@@ -1,6 +1,12 @@
+<!-- ルーティングのファイル -->
 <?php
 
 use Illuminate\Support\Facades\Route;
+/* ルーティングを設定するコントローラを宣言「HelloControllerというコントローラを使うよ！」
+   HelloController.phpファイルにアクションを記述するよう想起する
+*/
+
+use App\Http\Controllers\HelloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +23,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', function () {
-    return 'Hello, world!';
-});
+Route::get('/hello', [HelloController::class, 'index']);
