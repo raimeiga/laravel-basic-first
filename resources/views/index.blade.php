@@ -9,7 +9,9 @@
  
  <body>
      <p>Hello, world!</p>
-     <p>これはindex.blade.phpファイルです。</p>
+     <p>こんにちは、{{ $name }}さん！</p>  <!-- $nameはコントローラから受け取った変数 -->
+      
  </body>
+           
  
  </html>
