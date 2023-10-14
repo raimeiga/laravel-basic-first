@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
    HelloController.phpファイルにアクションを記述するよう想起する
 */
 
-use App\Http\Controllers\HelloController;
+use App\Http\Controllers\HelloController;      //「HelloControllerを使うよ」宣言
+use App\Http\Controllers\ProductController;    //「ProductControllerを使うよ」宣言
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', [HelloController::class, 'index']);
+
+Route::get('/products', [ProductController::class, 'index']);
