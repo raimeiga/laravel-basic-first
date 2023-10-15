@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HelloController;      //「HelloControllerを使うよ」宣言
 use App\Http\Controllers\ProductController;    //「ProductControllerを使うよ」宣言
+use App\Http\Controllers\VendorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/products/{id}', [ProductController::class, 'show']);
+
+Route::get('/vendors/{id}', [VendorController::class, 'show']);
