@@ -17,7 +17,8 @@ class VendorFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'vendor_code' => fake()->unique()->randomNumber(5, true),
+            'vendor_name' => fake()->company()                 
         ];
     }
 }
