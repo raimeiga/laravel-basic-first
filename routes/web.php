@@ -1,5 +1,4 @@
-<!-- ルーティングのファイル -->
-<?php
+ <?php
 
 use Illuminate\Support\Facades\Route;
 /* ルーティングを設定するコントローラを宣言「HelloControllerというコントローラを使うよ！」
@@ -10,6 +9,7 @@ use App\Http\Controllers\HelloController;      //「HelloControllerを使うよ�
 use App\Http\Controllers\ProductController;    //「ProductControllerを使うよ」宣言
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\ResponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +37,5 @@ Route::get('/vendors/{id}', [VendorController::class, 'show']);
 Route::get('/requests/create', [RequestController::class, 'create']);
  
 Route::post('/requests/confirm', [RequestController::class, 'confirm'])->name('requests.confirm');
+
+Route::get('/responses', [ResponseController::class, 'index']);
