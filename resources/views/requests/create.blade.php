@@ -7,8 +7,12 @@
      <title>Laravel基礎</title>
  </head>
  
+                                <!-- ↓ route()ヘルパー＝名前付きルートを呼び出すヘルパー
+                                 例）<a href="{{ route('posts.index') }}">投稿アプリ</a>のように書く
+                                'posts.index'部分は、名前付きルートの名前の部分で、
+                                 posts/index.blade.phpというURLの、フォルダ名.blade.phpを省略した書き方 -->
  <body>
-     <h1>お問い合わせ</h1>
+      <h1>お問い合わせ</h1> <!--↓ requests/confirm.blade.phpに送信内容を送る -->
      <form action="{{ route('requests.confirm') }}" method="POST">
          @csrf
          <table>
