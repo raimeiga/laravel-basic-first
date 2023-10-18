@@ -32,6 +32,10 @@ Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/products/{id}', [ProductController::class, 'show']);
 
+Route::get('/vendors/create', [VendorController::class, 'create']);
+ 
+Route::post('/vendors/store', [VendorController::class, 'store'])->name('vendors.store');
+
 Route::get('/vendors/{id}', [VendorController::class, 'show']);
 
 Route::get('/requests/create', [RequestController::class, 'create']);
