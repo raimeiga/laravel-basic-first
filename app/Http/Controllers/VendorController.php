@@ -24,7 +24,9 @@ class VendorController extends Controller
     }
 
     public function store(Request $request) {
-        // バリデーションを設定する
+        /* バリデーションを設定　vendors/create.blade.php（ビューファイル）に
+           エラーメッセージを表示するif ($errors->any())を記述している
+        */
         $request->validate([
             'vendor_code' => 'required|integer|min:0|unique:vendors,vendor_code',
             'vendor_name' => 'required|max:255'

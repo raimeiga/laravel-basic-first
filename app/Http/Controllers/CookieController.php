@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+// ↑ LaravelではCookieファサードを使うことで、クッキーに値を保存したり、保存した値を取得したりできる    
 use App\Models\Product;  
 /* ↑ AppフォルダのModelsフォルダのProductファイル（モデルのファイル）を使うよ!と宣言
      宣言することで、そのファイル内ではProductと記述するだけでProductクラスを呼び出せるようになる?
@@ -30,6 +31,9 @@ class CookieController extends Controller
         $request->validate([
             'product_id' => 'required|exists:products,id'
         ]);
+        /* ↑ バリデーションを設定　cookies/create.blade.php（ビューファイル）に
+           　エラーメッセージを表示するif ($errors->any())を記述している
+        */
 
         // キー名が'product_id'、値が商品IDのデータをクッキーに設定する（60分有効）
         Cookie::queue('product_id', $request->input('product_id'), 60);
