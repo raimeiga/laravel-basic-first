@@ -11,6 +11,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\ResponseController;
 use App\Http\Controllers\CookieController;
+use App\Http\Controllers\SessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +56,12 @@ Route::get('/cookies/create', [CookieController::class, 'create'])->name('cookie
 Route::post('/cookies/store', [CookieController::class, 'store'])->name('cookies.store');
  
 Route::delete('/cookies/destroy', [CookieController::class, 'destroy'])->name('cookies.destroy');
+
+Route::get('/sessions', [SessionController::class, 'index']);
+ 
+Route::get('/sessions/create', [SessionController::class, 'create'])->name('sessions.create');
+ 
+Route::post('/sessions/store', [SessionController::class, 'store'])->name('sessions.store');
+ 
+Route::delete('/sessions/destroy', [SessionController::class, 'destroy'])->name('sessions.destroy');
+
