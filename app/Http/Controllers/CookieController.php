@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
-use App\Models\Product;
-
+use App\Models\Product;  
+/* ↑ AppフォルダのModelsフォルダのProductファイル（モデルのファイル）を使うよ!と宣言
+     宣言することで、そのファイル内ではProductと記述するだけでProductクラスを呼び出せるようになる?
+*/
 class CookieController extends Controller
 {
     public function index() {
